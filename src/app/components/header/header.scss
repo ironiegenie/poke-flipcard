@@ -13,7 +13,7 @@ header {
         justify-content: space-between;
         align-items: center;
         
-// der erste direkte span, nicht alle davon
+        // der erste direkte span, nicht alle davon
         > span {
             cursor: pointer;
             &:hover {
@@ -30,5 +30,10 @@ header {
                 }
             }
         }
+    }
+
+    #pokeball {
+        cursor: pointer;
+        max-height: 32px;
     }
 }
