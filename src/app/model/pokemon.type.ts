@@ -1,11 +1,11 @@
-import { Ability } from "./ability.type"
-import { Cries } from "./Cries"
-import { GameIndex } from "./GameIndex"
-import { HeldItem } from "./HeldItem"
-import { Move } from "./Move"
-import { NameUrl } from "./NameString"
-import { PastAbilities } from "./PastAbilities"
-import { Type } from "./Type"
+import type { Ability } from "./ability.type"
+import type { Cries } from "./Cries"
+import type { GameIndex } from "./GameIndex"
+import type { HeldItem } from "./HeldItem"
+import type { Move } from "./Move"
+import type { NameUrl } from "./NameString"
+import type { PastAbilities } from "./PastAbilities"
+import type { Type } from "./Type"
 
 
 export type Pokemon = {

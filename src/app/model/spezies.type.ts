@@ -1,11 +1,11 @@
-import { NameUrl } from "./NameString"
-import { FlavorTextEntry } from "./FlavorTextEntry"
-import { Url } from "./Url"
-import { Variety } from "./Variety"
-import { PokedexNumber } from "./PokedexNumber"
-import { PalParkEncounter } from "./PalParkEncounter"
-import { Name } from "./Name"
-import { Genus } from "./Genus"
+import type { NameUrl } from "./NameString"
+import type { FlavorTextEntry } from "./FlavorTextEntry"
+import type { Url } from "./Url"
+import type { Variety } from "./Variety"
+import type { PokedexNumber } from "./PokedexNumber"
+import type { PalParkEncounter } from "./PalParkEncounter"
+import type { Name } from "./Name"
+import type { Genus } from "./Genus"
 
 export type Spezies = {
     base_happiness: number,

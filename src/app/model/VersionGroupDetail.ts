@@ -1,4 +1,4 @@
-import { NameUrl } from "./NameString";
+import type { NameUrl } from "./NameString";
 
 export interface VersionGroupDetail {
     level_learned_at: number;

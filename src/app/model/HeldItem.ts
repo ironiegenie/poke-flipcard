@@ -1,5 +1,5 @@
-import { NameUrl } from "./NameString";
-import { VersionDetail } from "./VersionDetail";
+import type { NameUrl } from "./NameString";
+import type { VersionDetail } from "./VersionDetail";
 
 export interface HeldItem {
     item: NameUrl;

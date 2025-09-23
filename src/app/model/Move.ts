@@ -1,5 +1,5 @@
-import { NameUrl } from "./NameString";
-import { VersionGroupDetail } from "./VersionGroupDetail";
+import type { NameUrl } from "./NameString";
+import type { VersionGroupDetail } from "./VersionGroupDetail";
 
 export interface Move {
     move: NameUrl;

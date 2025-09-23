@@ -1,4 +1,4 @@
-import { Typen } from "../enum/typen"
+import type { Typen } from "../enum/typen"
 
 export type KartenDaten = {
     // kommt von Pokemon Type aus dem Sprites Attribut

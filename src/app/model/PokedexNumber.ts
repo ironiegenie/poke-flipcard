@@ -1,4 +1,4 @@
-import { NameUrl } from "./NameString";
+import type { NameUrl } from "./NameString";
 
 export interface PokedexNumber {
     entry_number: number;
