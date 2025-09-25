@@ -1,14 +1,24 @@
 import { Typen } from "../enum/typen";
 import { KartenDaten } from "../model/kartenDaten.type";
+import { KartenDatenBuilder } from "./karten-daten-builder";
 
 
 export class KartenDatenKlasse implements KartenDaten {
-    constructor(
-        public bildUrl: string,
-        public shinyUrl: string,
-        public name: string,
-        public hp: number,
-        public beschreibung: string,
-        public typen: Typen[]
-    ) {}
+    bildUrl: string;
+    shinyUrl: string;
+    name: string;
+    hp: number;
+    beschreibung: string;
+    typen: string[];
+    farbe: string;
+
+    constructor(builder: KartenDatenBuilder) {
+        this.bildUrl = builder.bildUrl;
+        this.shinyUrl = builder.shinyUrl;
+        this.name = builder.name;
+        this.hp = builder.hp;
+        this.beschreibung = builder.beschreibung;
+        this.typen = builder.typen;
+        this.farbe = builder.farbe;
+    }
 }

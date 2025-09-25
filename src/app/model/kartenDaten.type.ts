@@ -14,5 +14,6 @@ export type KartenDaten = {
     // >>> where spezies.flavor_text_entries.language.name = "de"
     beschreibung: string,
     // >>> where pokemon.types.type.name = 
-    typen: Typen[]
+    typen: string[],
+    farbe: string
 }

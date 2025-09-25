@@ -6,7 +6,13 @@ import type { Move } from "./Move"
 import type { NameUrl } from "./NameString"
 import type { PastAbilities } from "./PastAbilities"
 import type { Type } from "./Type"
+import type { Sprite } from "./Sprite"
 
+interface Stats {
+    base_stat: number,
+    effort: number,
+    stat: NameUrl
+}
 
 export type Pokemon = {
     abilities: Ability[],
@@ -25,6 +31,8 @@ export type Pokemon = {
     past_abilities: PastAbilities[],
     past_types: null,
     species: NameUrl,
+    sprites: Sprite,
     types: Type[],
+    stats: Stats[],
     weight: number
 }
