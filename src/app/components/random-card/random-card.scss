@@ -1,0 +1,68 @@
+.big {
+    max-width: 300px;
+    height: 317px;
+    display: grid;
+    grid-template-areas:
+    "name hp"
+    "content content"
+    "pokedex pokedex"
+    "footer footer"
+    ;
+    padding: 3px;
+    
+}
+
+.box {
+    border: 3px solid black;
+}
+
+.name {
+    grid-area: name;
+    justify-self: left;
+}
+
+.pokedex {
+    grid-area: pokedex;
+    justify-self: right;
+    border: 1px solid black;
+    font-size: 80%; 
+    width: 20%;
+    margin: 5px;
+
+}
+
+.hp {
+    grid-area: hp;
+    justify-self: right;
+}
+
+.name, .hp {
+    border: 1px solid black;
+    font-size: 80%; 
+    width: 60%;
+    margin: 5px;
+}
+
+.bild {
+    grid-area: content;
+    justify-self: center;
+}
+
+.beschreibung {
+    border: 0.5px solid whitesmoke;
+    border-style: dashed;
+    grid-area: footer;
+    font-size: 50%;
+    color: white; 
+    margin: 3px;
+}
+
+p {
+  font-family: verdana; 
+  text-align: center;
+}
+
+
+button {
+    margin-top: 10px;
+}

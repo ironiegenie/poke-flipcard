@@ -1,4 +1,21 @@
-<h1>{{datenSignal().name}}</h1>
-<h2>{{datenSignal().beschreibung}}</h2>
+<div class="big box" 
+    [style.background-color]="datenSignal().farbe">
+    <p class="name" [style.background-color]="akzentFarbe">
+        {{datenSignal().name}}
+    </p>
+    <p class="hp" [style.background-color]="akzentFarbe">
+        {{datenSignal().hp}} 
+    </p>
+    <p class="pokedex" [style.background-color]="akzentFarbe">
+        Nr. {{pokedexNumber}}
+    </p>
+
+    <img class="bild" [ngSrc]="datenSignal().bildUrl" width=200 height=200 alt="Offizielles Pokemon Artwork">
+
+    <p class="beschreibung">{{datenSignal().beschreibung}}</p>
+
+</div>
+
+
 
 <button (click)="getRandomNationalDexPokemon()">Neues Pokemon</button>
