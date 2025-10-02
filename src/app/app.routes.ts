@@ -18,5 +18,12 @@ export const routes: Routes = [
             .then((m) => m.RandomCard)
             ;
         }
+    }, {
+        path: 'random-national/shiny-flip/:nr'
+        , loadComponent: () => {
+            return import('./components/shiny-flip/shiny-flip')
+            .then((m) => m.ShinyFlip)
+            ;
+        }
     }
 ];

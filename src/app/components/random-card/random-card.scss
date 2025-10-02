@@ -9,7 +9,6 @@
     "footer footer"
     ;
     padding: 3px;
-    
 }
 
 .box {
@@ -28,7 +27,6 @@
     font-size: 80%; 
     width: 20%;
     margin: 5px;
-
 }
 
 .hp {
@@ -46,6 +44,10 @@
 .bild {
     grid-area: content;
     justify-self: center;
+    cursor: pointer;
+    &:hover {
+        color: #000;
+    }
 }
 
 .beschreibung {

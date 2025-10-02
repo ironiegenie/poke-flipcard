@@ -1,9 +1,10 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { CallingPokeapi } from '../../services/calling-pokeapi';
 import { Randomizer } from '../../services/randomizer';
 import { KartenDaten } from '../../model/kartenDaten.type';
 import { KartenDatenBuilder } from '../../classes/karten-daten-builder';
 import { NgOptimizedImage } from "@angular/common";
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-random-card',
@@ -16,6 +17,8 @@ export class RandomCard implements OnInit {
   pokemon: KartenDaten = new KartenDatenBuilder().build();
   datenSignal = signal(this.pokemon);
   akzentFarbe = "rgb(255, 255, 255)";
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
   
   constructor(private randomizer: Randomizer, private callingPokeApi: CallingPokeapi) { };
   
@@ -36,6 +39,11 @@ export class RandomCard implements OnInit {
     
     this.datenSignal.set(this.pokemon);
     
+  }
+
+  navigateToShiny(pokedexNr: number) {
+    let url = "shiny-flip/" + pokedexNr;
+    this.router.navigate([url], {relativeTo: this.route});
   }
 
   private setzeFarben() {
