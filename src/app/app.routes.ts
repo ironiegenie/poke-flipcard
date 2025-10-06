@@ -19,10 +19,17 @@ export const routes: Routes = [
             ;
         }
     }, {
-        path: 'random-national/shiny-flip/:nr'
+        path: 'hoenn-dex'
         , loadComponent: () => {
-            return import('./components/shiny-flip/shiny-flip')
-            .then((m) => m.ShinyFlip)
+            return import('./components/hoenn-dex/hoenn-dex')
+            .then((m) => m.HoennDex)
+            ;
+        }
+    }, {
+        path: 'national-dex/:nr'
+        , loadComponent: () => {
+            return import('./components/national-dex-pokemon/national-dex-pokemon')
+            .then((m) => m.NationalDexPokemon)
             ;
         }
     }

@@ -20,20 +20,12 @@ header {
                 color: #000;
             }
         }
-
-        ul {
-            list-style: none;
-            li {
-                cursor: pointer;
-                &:hover {
-                    color: #000;
-                }
-            }
-        }
     }
 
-    #pokeball {
+    #pokeball , #hoenn-dex {
         cursor: pointer;
         max-height: 32px;
     }
+
+
 }

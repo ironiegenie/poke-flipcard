@@ -17,8 +17,8 @@ export class RandomCard implements OnInit {
   pokemon: KartenDaten = new KartenDatenBuilder().build();
   datenSignal = signal(this.pokemon);
   akzentFarbe = "rgb(255, 255, 255)";
-  private route = inject(ActivatedRoute);
-  private router = inject(Router);
+  // private route = inject(ActivatedRoute);
+  // private router = inject(Router);
   
   constructor(private randomizer: Randomizer, private callingPokeApi: CallingPokeapi) { };
   
@@ -41,9 +41,16 @@ export class RandomCard implements OnInit {
     
   }
 
-  navigateToShiny(pokedexNr: number) {
-    let url = "shiny-flip/" + pokedexNr;
-    this.router.navigate([url], {relativeTo: this.route});
+  /**
+   * tauscht die Bilder von shiny zu normal und wieder zurück, wenn es erneut ausgelöst wird
+   */
+  switchPictures() {
+    let newShiny = this.pokemon.bildUrl;
+    let newBild = this.pokemon.shinyUrl;
+
+    this.pokemon.shinyUrl = newShiny;
+    this.pokemon.bildUrl = newBild;
+    this.datenSignal.set(this.pokemon);
   }
 
   private setzeFarben() {

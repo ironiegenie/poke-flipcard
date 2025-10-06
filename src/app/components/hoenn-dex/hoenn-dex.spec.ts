@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShinyFlip } from './shiny-flip';
+import { HoennDex } from './hoenn-dex';
 
-describe('ShinyFlip', () => {
-  let component: ShinyFlip;
-  let fixture: ComponentFixture<ShinyFlip>;
+describe('HoennDex', () => {
+  let component: HoennDex;
+  let fixture: ComponentFixture<HoennDex>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ShinyFlip]
+      imports: [HoennDex]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ShinyFlip);
+    fixture = TestBed.createComponent(HoennDex);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -85,7 +85,7 @@ export class CallingPokeapi {
     });
 
     kartenDatenBuilder
-      .setBeschreibung(spezies.flavor_text_entries.filter(entry => entry.language.name == "de")[0]?.flavor_text || "WTF")
+      .setBeschreibung(spezies.flavor_text_entries.filter(entry => entry.language.name == "de")[0]?.flavor_text || "Dieses Pokemon ist zu neu für die Poké-API.")
       .setName(spezies.names.filter(name => name.language.name == "de")[0].name)
       .setHp(pokemon.stats.filter(stat => stat.stat.name == "hp")[0].base_stat)
       .setFarbe(spezies.color.name)
