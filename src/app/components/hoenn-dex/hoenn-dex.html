@@ -1,7 +1,11 @@
 <ul class="hoenn-pokemon">
     @for (pokemon of hoennDexSignal().values(); track pokemon.hoennDexNr) {
         <li>
-            <label for="hoenn-dex-{{pokemon.hoennDexNr}}" (click)="routeToPokecard(pokemon.pokedexNr)">{{pokemon.hoennDexNr}} {{pokemon.name}}</label>
+            <label 
+                for="hoenn-dex-{{pokemon.hoennDexNr}}" 
+                (click)="routeToPokecard(pokemon.pokedexNr)"
+                >{{pokemon.hoennDexNr}} {{pokemon.name}}
+            </label>
         </li>
     }
 </ul>
