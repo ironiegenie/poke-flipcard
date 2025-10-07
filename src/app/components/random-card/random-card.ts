@@ -4,7 +4,6 @@ import { Randomizer } from '../../services/randomizer';
 import { KartenDaten } from '../../model/kartenDaten.type';
 import { KartenDatenBuilder } from '../../classes/karten-daten-builder';
 import { NgOptimizedImage } from "@angular/common";
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-random-card',
@@ -17,17 +16,19 @@ export class RandomCard implements OnInit {
   pokemon: KartenDaten = new KartenDatenBuilder().build();
   datenSignal = signal(this.pokemon);
   akzentFarbe = "rgb(255, 255, 255)";
-  // private route = inject(ActivatedRoute);
-  // private router = inject(Router);
   
-  constructor(private randomizer: Randomizer, private callingPokeApi: CallingPokeapi) { };
+  constructor(private randomizer: Randomizer, private callingPokeApi: CallingPokeapi) {};
   
-
+  /**
+   * 
+   */
   async ngOnInit() {
     await this.getRandomNationalDexPokemon();
   }
 
-
+  /**
+   * 
+   */
   async getRandomNationalDexPokemon() {
     console.log(this.pokedexNumber = this.randomizer.getRandomNationalDexNumber());
 
@@ -38,7 +39,6 @@ export class RandomCard implements OnInit {
     this.setzeFarben();
     
     this.datenSignal.set(this.pokemon);
-    
   }
 
   /**
@@ -53,6 +53,9 @@ export class RandomCard implements OnInit {
     this.datenSignal.set(this.pokemon);
   }
 
+  /**
+   * 
+   */
   private setzeFarben() {
     switch (this.pokemon.farbe) {
       case "green":

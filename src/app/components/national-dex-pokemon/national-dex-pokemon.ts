@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-national-dex-pokemon',
@@ -6,7 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: './national-dex-pokemon.html',
   styleUrl: './national-dex-pokemon.scss'
 })
-export class NationalDexPokemon {
+export class NationalDexPokemon implements OnInit {
 
+  private route = inject(ActivatedRoute);
+  nummer = signal(0);
+
+  ngOnInit() {
+    console.log(this.route.params.toSignal());
+  }
 
 }
